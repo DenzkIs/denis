@@ -4,30 +4,28 @@ let button = document.querySelector('#button')
 let main = document.querySelector('#main')
 function fn() {
     main.innerHTML=''
-    fetch('https://santrok.pythonanywhere.com/barter/api/v1/show_product/')
+    fetch('https://deniszk.pythonanywhere.com/api/v1/products/')
         .then(resp=>resp.json())
         .then(data=>{
             console.log(data)
             data.map(item=>{
                 main.innerHTML+=`<div class="card">
-                                    <p>${item.name}</p>
+                                    <p>${item.title}</p>
                                     <p>${item.price}</p>
-                                    <p>${item.category}</p>
                                 </div>`
             })
         })
 
     setInterval(()=>{
             main.innerHTML=''
-    fetch('https://santrok.pythonanywhere.com/barter/api/v1/show_product/')
+    fetch('https://deniszk.pythonanywhere.com/api/v1/products/')
         .then(resp=>resp.json())
         .then(data=>{
             console.log(data)
             data.map(item=>{
                 main.innerHTML+=`<div class="card">
-                                    <p>${item.name}</p>
+                                    <p>${item.title}</p>
                                     <p>${item.price}</p>
-                                    <p>${item.category}</p>
                                 </div>`
             })
         })
