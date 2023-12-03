@@ -12,6 +12,7 @@ function fn() {
                 main.innerHTML+=`<div class="card">
                                     <p>${item.title}</p>
                                     <p>${item.price}</p>
+                                    <img style="max-width: 100px" src="${item.image}" alt="${item.image}">
                                 </div>`
             })
         })
@@ -26,6 +27,9 @@ function fn() {
                 main.innerHTML+=`<div class="card">
                                     <p>${item.title}</p>
                                     <p>${item.price}</p>
+                                    <img style="max-width: 100px" src="${item.image}" alt="${item.image}">
+
+                                    
                                 </div>`
             })
         })
